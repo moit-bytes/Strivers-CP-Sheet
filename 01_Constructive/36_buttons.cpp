@@ -7,20 +7,17 @@ int main()
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
 #endif
-
 	int n;
 	cin >> n;
 
-	string s;
-	cin >> s;
-
-	int i = 0;
-	int k = 1;
-	while (i < n)
+	int res = 0;
+	for (int i = 1; i <= n; i++)
 	{
-		cout << s[i];
-		i = i + k;
-		k = k + 1;
+		res = res + (i * (n - i));
 	}
+
+	res = res + n;
+
+	cout << res;
 	return 0;
 }
